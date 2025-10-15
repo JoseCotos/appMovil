@@ -14,11 +14,17 @@
         android:theme="@style/Theme.MiappPosta"
         tools:targetApi="31">
         <activity
+            android:name=".SeleccionHorarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EspecialidadesActivity"
+            android:exported="false" />
+        <activity
             android:name=".ConfirmacionActivity"
             android:exported="false" />
         <activity
             android:name=".HistoricoActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".AgendaCitaActivity"
             android:exported="false" /> <!-- Pantalla de inicio (Bienvenida) -->

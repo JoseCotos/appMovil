@@ -13,16 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.upc.miappposta.R;
 import com.upc.miappposta.SeleccionHorarioActivity;
-import com.upc.miappposta.entidad.Especialidad;
+import com.upc.miappposta.entidad.EspecialidadJava;
 
 import java.util.List;
 
 public class EspecialidadesAdapter extends RecyclerView.Adapter<EspecialidadesAdapter.ViewHolder> {
 
-    private final List<Especialidad> especialidadList;
+    private final List<EspecialidadJava> especialidadList;
     private final Context context;
 
-    public EspecialidadesAdapter(Context context, List<Especialidad> especialidadList) {
+    public EspecialidadesAdapter(Context context, List<EspecialidadJava> especialidadList) {
         this.context = context;
         this.especialidadList = especialidadList;
     }
@@ -36,7 +36,7 @@ public class EspecialidadesAdapter extends RecyclerView.Adapter<EspecialidadesAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Especialidad especialidad = especialidadList.get(position);
+        EspecialidadJava especialidad = especialidadList.get(position);
 
         holder.tvNombre.setText(especialidad.getNombre());
 

@@ -1,11 +1,11 @@
 package com.upc.miappposta.entidad;
 
-public class Especialidad {
+public class EspecialidadJava {
     private String nombre;
     private int id;
     private int iconoResId;
 
-    public Especialidad(String nombre, int id, int iconoResId) {
+    public EspecialidadJava(String nombre, int id, int iconoResId) {
         this.nombre = nombre;
         this.id = id;
         this.iconoResId = iconoResId;

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.upc.miappposta.adapters.EspecialidadesAdapter;
-import com.upc.miappposta.entidad.Especialidad;
+import com.upc.miappposta.entidad.EspecialidadJava;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class EspecialidadesActivity extends AppCompatActivity {
 
     private RecyclerView rvEspecialidades;
     private EspecialidadesAdapter adapter;
-    private List<Especialidad> especialidadList;
+    private List<EspecialidadJava> especialidadList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +37,13 @@ public class EspecialidadesActivity extends AppCompatActivity {
 
     private void cargarEspecialidades() {
         especialidadList = new ArrayList<>();
-        especialidadList.add(new Especialidad("Medicina General", 1, R.drawable.mgeneral));
-        especialidadList.add(new Especialidad("Pediatría", 2, R.drawable.pediatria));
-        especialidadList.add(new Especialidad("Cardiología", 3, R.drawable.cardiologia));
+        especialidadList.add(new EspecialidadJava("Medicina General", 1, R.drawable.mgeneral));
+        especialidadList.add(new EspecialidadJava("Pediatría", 2, R.drawable.pediatria));
+        especialidadList.add(new EspecialidadJava("Cardiología", 3, R.drawable.cardiologia));
 
-        especialidadList.add(new Especialidad("Neumología", 4, R.drawable.neumologia));
-        especialidadList.add(new Especialidad("Nefrología", 5, R.drawable.nefrologia));
-        especialidadList.add(new Especialidad("Endocrinología", 6, R.drawable.endocrinologia));
+        especialidadList.add(new EspecialidadJava("Neumología", 4, R.drawable.neumologia));
+        especialidadList.add(new EspecialidadJava("Nefrología", 5, R.drawable.nefrologia));
+        especialidadList.add(new EspecialidadJava("Endocrinología", 6, R.drawable.endocrinologia));
 
     }
 }

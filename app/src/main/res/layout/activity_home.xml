@@ -68,5 +68,18 @@
 
             android:drawablePadding="8dp"
             android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnNotificar"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:backgroundTint="#060270"
+            android:textColor="#FFF"
+            android:text="Notificar\nCita"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            android:drawablePadding="8dp"
+            android:padding="8dp" />
     </GridLayout>
 </LinearLayout>

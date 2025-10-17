@@ -151,21 +151,39 @@ class ReservaCitaActivity : AppCompatActivity() {
     }
     fun llenarDisponibilidadHora(idMedico: Int, fecha: String){
         val DisponibilidadHora = MedicoService(this).listarDisponibilidadHora(idMedico, fecha)
-        binding.spHora.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, DisponibilidadHora)
+        //binding.spHora.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, DisponibilidadHora)
+
+        val  adapter = ArrayAdapter(this, R.layout.custom_spinner_item, DisponibilidadHora)
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item)
+        binding.spHora.adapter = adapter
+
     }
 
     fun llenarDisponibilidadFecha(idMedico: Int){
         val DisponibilidadFecha = MedicoService(this).listarDisponibilidadFecha(idMedico)
-        binding.spFecha.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, DisponibilidadFecha)
+        //binding.spFecha.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, DisponibilidadFecha)
+
+        val  adapter = ArrayAdapter(this, R.layout.custom_spinner_item, DisponibilidadFecha)
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item)
+        binding.spFecha.adapter = adapter
+
     }
     fun llenarEspecialidad(){
         val listaEspecialidades = EspecialidadService(this).listarEspecialidadesTexto()
-        binding.spEspecialidad.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaEspecialidades)
+//        binding.spEspecialidad.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaEspecialidades)
+
+        val  adapter = ArrayAdapter(this, R.layout.custom_spinner_item, listaEspecialidades)
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item)
+        binding.spEspecialidad.adapter = adapter
     }
 
     fun llenarMedico(idEspecialidad: Int){
         val listarMedicos = MedicoService(this).listarMedicosTexto(idEspecialidad)
-        binding.spMedico.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, listarMedicos)
+        //binding.spMedico.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, listarMedicos)
+
+        val  adapter = ArrayAdapter(this, R.layout.custom_spinner_item, listarMedicos)
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item)
+        binding.spMedico.adapter = adapter
     }
 
 

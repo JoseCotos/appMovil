@@ -4,13 +4,22 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#F5F5F5">
+    android:background="@drawable/fondo">
+
+
+    <ImageView
+        android:id="@+id/imgLogoPosta"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_posta"
+        android:contentDescription="Icono de posta médica"
+        android:layout_marginBottom="24dp" />
 
     <TextView
         android:id="@+id/txtBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Bienvenido a MiAppPosta! 🎉"
+        android:text="¡Bienvenido a MiAppPosta! "
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#333"

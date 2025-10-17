@@ -5,33 +5,68 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:padding="24dp">
 
     <TextView
         android:id="@+id/txtMensaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido al sistema 🎉"
+        android:text="Bienvenido al sistema"
         android:textColor="#333"
         android:textSize="22sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp" />
 
-    <Button
-        android:id="@+id/btnHistorial"
-        android:layout_width="267dp"
+    <GridLayout
+        android:id="@+id/gridBotones"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFF"
-        android:text="Historial de Citas" />
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignMargins"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btnConfirmado"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFF"
-        android:text="Mensaje Confirmado" />
 
+        <Button
+            android:id="@+id/btnHistorial"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFF"
+            android:text="Historial\nCitas"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            android:drawablePadding="8dp"
+            android:padding="8dp" />
+
+        <!-- BOTÓN CONFIRMADO -->
+        <Button
+            android:id="@+id/btnConfirmado"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFF"
+            android:text="Mensaje\nConfirmado"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            android:drawablePadding="8dp"
+            android:padding="8dp" />
+
+
+        <Button
+            android:id="@+id/btnAgendar"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFF"
+            android:text="Agendar\nCita"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            android:drawablePadding="8dp"
+            android:padding="8dp" />
+    </GridLayout>
 </LinearLayout>

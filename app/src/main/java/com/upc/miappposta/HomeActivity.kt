@@ -7,7 +7,6 @@ import com.upc.miappposta.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
-
     private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +19,13 @@ class HomeActivity : AppCompatActivity() {
         binding.btnHistorial.setOnClickListener {
             startActivity(Intent(this, HistoricoActivity::class.java))
         }
+
         binding.btnConfirmado.setOnClickListener {
             startActivity(Intent(this, ConfirmacionActivity::class.java))
+        }
+
+        binding.btnAgendar.setOnClickListener {
+            startActivity(Intent(this, AgendaCitaActivity::class.java))
         }
     }
 }

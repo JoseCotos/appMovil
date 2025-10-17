@@ -99,6 +99,15 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, 
 
     }
 
+    fun insertarMedico(nombre: String, apellido: String, telefono: String, idEspecialidad: Int): Long {
+        val db = writableDatabase
+        val valores = ContentValues()
+        valores.put("nombre", nombre)
+        valores.put("apellido", apellido)
+        valores.put("telefono", telefono)
+        valores.put("id_especialidad", idEspecialidad)
+        return db.insert("medico", null, valores)
+    }
     fun validarLogin(correo: String, password: String): Boolean {
         val db = this.readableDatabase
         val cursor = db.rawQuery(

@@ -10,7 +10,7 @@ import com.upc.miappposta.util.SQLiteHelper
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    private lateinit var db: DatabaseHelper
+    //private lateinit var db: SQLiteHelper
     private lateinit var dbHelper: SQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = DatabaseHelper(this)
+        dbHelper = SQLiteHelper(this)
 
         binding.btnLogin.setOnClickListener {
             val correo = binding.txtCorreo.text.toString().trim()
@@ -29,10 +29,20 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (db.validarLogin(correo, password)) {
-                Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeActivity::class.java))
-                finish()
+            if (dbHelper.validarLogin(correo, password)) {
+                if (correo.equals("admin@gmail.com")){
+                    Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeAdminActivity::class.java))
+                    finish()
+
+                } else{
+
+                    Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    finish()
+
+                }
+
             } else {
                 Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
             }

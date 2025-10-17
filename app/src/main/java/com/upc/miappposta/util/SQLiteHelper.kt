@@ -99,6 +99,17 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, 
 
     }
 
+    fun validarLogin(correo: String, password: String): Boolean {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT * FROM usuario WHERE correo=? AND password=?",
+            arrayOf(correo, password)
+        )
+        val existe = cursor.count > 0
+        cursor.close()
+        return existe
+    }
+
     fun llenarDatosIniciales(){
         val db = this.writableDatabase
         var paciente = Paciente(0,"DNI", "12345678", "Administrador", "Administrador", "admin@gmail.com", "987654321","Av. Principal 123")
@@ -122,7 +133,7 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, 
         usuario = Usuario(0,2,"josecotos@gmail.com","123456")
         db.insert("usuario",null, llenarUsuario(usuario))
 
-        usuario = Usuario(0,3,"john.jay@example.com","qwerty")
+        usuario = Usuario(0,3,"juand@gmail.com","123456")
         db.insert("usuario",null, llenarUsuario(usuario))
 
         usuario = Usuario(0,4,"william.henry.harrison@example-pet-store.com","password")

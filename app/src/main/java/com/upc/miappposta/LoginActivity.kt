@@ -30,10 +30,15 @@ class LoginActivity : AppCompatActivity() {
             }
 
             if (dbHelper.validarLogin(correo, password)) {
-                if (correo.equals("admin@gmail.com"))
-                Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeAdminActivity::class.java))
-                finish()
+                if (correo.equals("admin@gmail.com")) {
+                    Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeAdminActivity::class.java))
+                    finish()
+                }else{
+                    Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    finish()
+                }
             } else {
                 Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
             }

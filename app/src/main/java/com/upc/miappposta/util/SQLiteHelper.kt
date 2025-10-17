@@ -67,6 +67,7 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, 
                 "id_cita INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "id_paciente INTEGER," +
                 "id_medico INTEGER," +
+                "id_especialidad INTEGER," +
                 "fecha TEXT," +
                 "hora TEXT," +
                 "estado TEXT," +
@@ -187,87 +188,88 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, 
         medico = Medico(0,4,"Diego","Sánchez","222222222")
         db.insert("medico",null, llenarMedico(medico))
 
-        var disponibilidad = Disponibilidad(0,1,"2025-10-20","10:00","Pendiente")
+
+        var disponibilidad = Disponibilidad(0,1,"20/10/2025","10:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,1,"2025-10-20","11:00","Pendiente")
+        disponibilidad = Disponibilidad(0,1,"20/10/2025","11:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,1,"2025-10-20","14:00","Pendiente")
+        disponibilidad = Disponibilidad(0,1,"20/10/2025","14:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,1,"2025-10-20","15:00","Pendiente")
+        disponibilidad = Disponibilidad(0,1,"20/10/2025","15:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,2,"2025-10-20","09:00","Pendiente")
+        disponibilidad = Disponibilidad(0,2,"20/10/2025","09:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,2,"2025-10-20","10:00","Pendiente")
+        disponibilidad = Disponibilidad(0,2,"20/10/2025","10:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad =  Disponibilidad(0,2,"2025-10-20","11:00","Pendiente")
+        disponibilidad =  Disponibilidad(0,2,"20/10/2025","11:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,3,"2025-10-20","14:00","Pendiente")
+        disponibilidad = Disponibilidad(0,3,"20/10/2025","14:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,3,"2025-10-20","15:00","Pendiente")
+        disponibilidad = Disponibilidad(0,3,"20/10/2025","15:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,3,"2025-10-20","16:00","Pendiente")
+        disponibilidad = Disponibilidad(0,3,"20/10/2025","16:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,4,"2025-10-20","11:00","Pendiente")
+        disponibilidad = Disponibilidad(0,4,"20/10/2025","11:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,4,"2025-10-20","12:00","Pendiente")
+        disponibilidad = Disponibilidad(0,4,"20/10/2025","12:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,5,"2025-10-20","10:00","Pendiente")
+        disponibilidad = Disponibilidad(0,5,"20/10/2025","10:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,5,"2025-10-20","11:00","Pendiente")
+        disponibilidad = Disponibilidad(0,5,"20/10/2025","11:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,5,"2025-10-20","12:00","Pendiente")
+        disponibilidad = Disponibilidad(0,5,"20/10/2025","12:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,6,"2025-10-20","11:00","Pendiente")
+        disponibilidad = Disponibilidad(0,6,"20/10/2025","11:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,6,"2025-10-20","12:00","Pendiente")
+        disponibilidad = Disponibilidad(0,6,"20/10/2025","12:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,7,"2025-10-20","09:00","Pendiente")
+        disponibilidad = Disponibilidad(0,7,"20/10/2025","09:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,7,"2025-10-20","10:00","Pendiente")
+        disponibilidad = Disponibilidad(0,7,"20/10/2025","10:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,8,"2025-10-20","09:00","Pendiente")
+        disponibilidad = Disponibilidad(0,8,"20/10/2025","09:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,8,"2025-10-20","10:00","Pendiente")
+        disponibilidad = Disponibilidad(0,8,"20/10/2025","10:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        disponibilidad = Disponibilidad(0,8,"2025-10-20","11:00","Pendiente")
+        disponibilidad = Disponibilidad(0,8,"20/10/2025","11:00","Pendiente")
         db.insert("disponibilidad",null, llenarDisponibilidad(disponibilidad))
 
-        var cita = Cita(0,2,1,"2025-10-01","10:00","Atendido","Dolor de cabeza")
+
+        var cita = Cita(0,2,1,1,"01/10/2025","10:00","Atendido","Dolor de cabeza")
         db.insert("cita",null, llenarCita(cita))
 
-        cita = Cita(0,2,1,"2025-10-14","11:00","Cancelado","Dolor de garganta")
+        cita = Cita(0,2,1,1,"14/10/2025","11:00","Cancelado","Dolor de garganta")
         db.insert("cita",null, llenarCita(cita))
 
-        cita = Cita(0,2,1,"2025-10-21","09:00","Pendiente","Dolor de Cabeza")
+        cita = Cita(0,2,1,2,"21/10/2025","09:00","Pendiente","Dolor de Cabeza")
         db.insert("cita",null, llenarCita(cita))
 
-        cita = Cita(0,3,2,"2025-10-02","10:00","Atendido","Dolor de Cabeza")
+        cita = Cita(0,3,2,2,"02/10/2025","10:00","Atendido","Dolor de Cabeza")
         db.insert("cita",null, llenarCita(cita))
 
-        cita = Cita(0,3,2,"2025-10-15","11:00","Atendido","Dolor de Pie izquierdo")
+        cita = Cita(0,3,2,3,"15/10/2025","11:00","Atendido","Dolor de Pie izquierdo")
         db.insert("cita",null, llenarCita(cita))
-
 
     }
 
@@ -275,6 +277,7 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, 
         val valores = ContentValues()
         valores.put("id_paciente", cita.id_paciente)
         valores.put("id_medico", cita.id_medico)
+        valores.put("id_especialidad", cita.id_especialidad)
         valores.put("fecha", cita.fecha)
         valores.put("hora", cita.hora)
         valores.put("estado", cita.estado)

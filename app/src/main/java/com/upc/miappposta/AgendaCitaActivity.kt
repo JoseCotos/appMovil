@@ -20,18 +20,12 @@ class AgendaCitaActivity : AppCompatActivity() {
             insets
         }
 
-        val btnMedico = findViewById<android.widget.ImageButton>(R.id.btnMedico)
-        val btnEspecialidad = findViewById<android.widget.ImageButton>(R.id.btnEspecialidad)
+        val btnReservaCita = findViewById<android.widget.ImageButton>(R.id.btnReservaCita)
 
-        btnMedico.setOnClickListener {
-            Toast.makeText(this, "Seleccionaste Médico", Toast.LENGTH_SHORT).show()
-            // Aquí podrías abrir otra pantalla:
-            // startActivity(Intent(this, MedicoActivity::class.java))
+        btnReservaCita.setOnClickListener {
+            Toast.makeText(this, "Reserva de Cita Médica", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ReservaCitaActivity::class.java))
         }
 
-        btnEspecialidad.setOnClickListener {
-            Toast.makeText(this, "Seleccionaste Especialidad", Toast.LENGTH_SHORT).show()
-             startActivity(Intent(this, PacienteActivity::class.java))
-        }
     }
 }

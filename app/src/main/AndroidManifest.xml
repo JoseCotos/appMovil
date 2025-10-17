@@ -4,6 +4,7 @@
     package="com.upc.miappposta">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiappPosta"
         tools:targetApi="31">
+        <activity
+            android:name=".ReservarCitaMedicaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReservaCitaActivity"
+            android:exported="false" />
         <activity
             android:name=".RegistrarMedicoActivity"
             android:exported="false" />

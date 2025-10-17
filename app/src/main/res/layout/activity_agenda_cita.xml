@@ -33,68 +33,36 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <!-- Subtítulo -->
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Selecciona una opción"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <!-- Botón de Médico -->
-    <ImageButton
-        android:id="@+id/btnMedico"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Seleccionar médico"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/doctora" />
 
     <!-- Botón de Especialidad -->
     <ImageButton
-        android:id="@+id/btnEspecialidad"
+        android:id="@+id/btnReservaCita"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:contentDescription="Seleccionar especialidad"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/lista_especialidad" />
 
     <!-- Texto debajo de los botones -->
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Médico"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/btnMedico"
-        app:layout_constraintTop_toBottomOf="@+id/btnMedico"
-        app:layout_constraintEnd_toEndOf="@+id/btnMedico"
-        app:layout_constraintHorizontal_bias="0.5" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agendar Cita"
+        android:layout_marginTop="8dp"
+        android:text="Reservar Cita Médica"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/btnEspecialidad"
-        app:layout_constraintTop_toBottomOf="@+id/btnEspecialidad"
-        app:layout_constraintEnd_toEndOf="@+id/btnEspecialidad"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintEnd_toEndOf="@+id/btnReservaCita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnReservaCita"
+        app:layout_constraintTop_toBottomOf="@+id/btnReservaCita" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
